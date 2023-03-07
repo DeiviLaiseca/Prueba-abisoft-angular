@@ -1,0 +1,73 @@
+<!-- <div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <input #input (keyup)="buscarUsuario(input.value)" type="text" class="form-control" placeholder="Buscar">
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+
+    <button routerLink="/usuario-admin/crear" class="btn" style="background-color: darkblue;color: white; border-radius: 30px;">CREAR</button>
+    <br>
+    <br>
+    <div class="row animated fadeIn" *ngIf="cargando">
+        <div class="col-sm-12">
+            <div class="alert alert-warnign text-center">
+                <strong>Cargando</strong>
+                <br>
+                <i class="fa fa-refresh fa-spin fa-2x"></i>
+                <br>
+                <span>Un momento por favor</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row animated fadeIn">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead style="background-color: darkblue; color: white; align-items: center;">
+                            <th style="text-align: center;">Nombres</th>
+                            <th style="text-align: center;">Apellidos</th>
+                            <th style="text-align: center;">Documento</th>
+                            <th style="text-align: center;">Fecha de nacimiento</th>
+                            <th style="text-align: center;">Fecha de inscripción</th>
+                            <th style="text-align: center;">Edad</th>
+                            <th style="text-align: center;">Costo</th>
+                            <th style="text-align: center;">Opciones</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let usuario of usuarios">
+                                <td style="text-align: center;">
+                                    {{usuario.firstName}} {{usuario.secondName}}
+                                </td>
+                                <td style="text-align: center;">
+                                    {{usuario.lastFirstName}} {{usuario.lastSecondName}}
+                                </td>
+                                <td style="text-align: center;">
+                                    {{usuario.document}}
+                                </td>
+                                <td style="text-align: center;">{{usuario.bornDate}}</td>
+                                <td style="text-align: center;">{{usuario.inscriptionDate}}</td>
+                                <td style="text-align: center;">{{usuario.age}}</td>
+                                <td style="text-align: center;">{{usuario.cost}}</td>
+                                <td style="text-align: center;">
+                                    <button (click)="actualizarUsuario(usuario._id)" class="btn" style="margin-right: 2px; background-color: darkblue;color: white;">
+                                    <i class="fa fa-pencil"></i>
+                                </button>
+
+                                    <button (click)="eliminarUsuario(usuario)" class="btn btn-danger" style="margin-top: 2px;margin-right: 2px;">
+                                    <i class="fa fa-trash-o"></i>
+                                </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="limiter animated fadeInLeft">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <form #usuarioForm=ngForm (ngSubmit)="buscar(usuarioForm)" class="login100-form validate-form flex-sb flex-w">
+
+                <span class="login100-form-title p-b-51">
+                    Registro de Usuarios
+                </span>
+
+                <span style="color: darkblue;">Tipo de documento</span>
+                <div class="wrap-input100 m-b-16">
+                    <select class="input100" name="tipo" [(ngModel)]="usuario.tipo">
+                        <option *ngFor="let documento of tiposDocumento" [value]="documento.id">{{documento.nombre}}</option>
+                      </select>
+                </div>
+                <span style="color: darkblue;">Numero de documento</span>
+                <div class="wrap-input100 m-b-16">
+                    <input name="id" class="input100" type="text" [(ngModel)]="usuario.id" required>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit" style="border-radius: 30px; background-color: darkblue;">
+                        Buscar
+                    </button>
+                </div>
+            </form>
+            <div style="text-align: center;">
+                <button type="button" class="btn btn-link" (click)="crearUsuario()">Crear Usuario</button>
+            </div>
+        </div>
+    </div>
+</div>

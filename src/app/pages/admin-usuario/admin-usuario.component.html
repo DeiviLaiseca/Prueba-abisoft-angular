@@ -1,0 +1,108 @@
+<div class="row" style="text-align: center;">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">Usuario</h4>
+                <h6 class="card-subtitle">{{btnText}} información</h6>
+
+                <form class="form-horizontal p-t-20" [formGroup]="usuarioForm" (submit)="accionUsuario()">
+                    <div class="form-group row">
+                        <label for="exampleInputEmail3" class="col-sm-3 control-label">Primer Nombre</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="firstName" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Segundo nombre</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="secondName" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Primer apellido</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="lastFirstName" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Segundo apellido</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="lastSecondName" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Documento</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="document" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">fecha de nacimiento</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="date" formControlName="bornDate" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Fecha de inscripción</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="date" formControlName="inscriptionDate" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Edad</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="age" class="form-control" id="exampleInputuname3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Costo</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" formControlName="cost" class="form-control" id="exampleInputuname3" placeholder="$">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-6" style="text-align: right;">
+                            <button type="submit" [disabled]="usuarioForm.invalid" class="btn waves-effect waves-light" style="background-color: darkblue;color: white;border-radius: 30px;">
+                                <i class="fa fa-save"></i>
+                                {{btnText}}
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button (click)="cancelar()" class="btn btn-dark waves-effect waves-light" style="border-radius: 30px;">
+                                Cancelar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
